@@ -1,6 +1,3 @@
-# Python-Api-Code-Design
-Python REST API demonstrating clean code, layered architecture, automated tests, Docker and Swagger (OpenAPI).
-
 # Python API – Code Design & Best Practices
 
 API simples em Python para cálculo de média aritmética, desenvolvida com foco em **boas práticas de design de código**, separação de responsabilidades e testes automatizados.
