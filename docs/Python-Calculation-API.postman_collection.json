@@ -1,0 +1,58 @@
+{
+  "info": {
+    "name": "Python Calculation API",
+    "description": "Requests for the calculation endpoints.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://127.0.0.1:5000"
+    }
+  ],
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/health"
+      }
+    },
+    {
+      "name": "Arithmetic mean",
+      "request": {
+        "method": "POST",
+        "header": [{"key": "Content-Type", "value": "application/json"}],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"values\": [10, 20, 30]\n}"
+        },
+        "url": "{{baseUrl}}/api/v1/calculations/arithmetic-mean"
+      }
+    },
+    {
+      "name": "Weighted mean",
+      "request": {
+        "method": "POST",
+        "header": [{"key": "Content-Type", "value": "application/json"}],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"values\": [7, 8, 10],\n  \"weights\": [2, 3, 5]\n}"
+        },
+        "url": "{{baseUrl}}/api/v1/calculations/weighted-mean"
+      }
+    },
+    {
+      "name": "Statistics",
+      "request": {
+        "method": "POST",
+        "header": [{"key": "Content-Type", "value": "application/json"}],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"values\": [2, 4, 4, 4, 5, 5, 7, 9],\n  \"sample\": false\n}"
+        },
+        "url": "{{baseUrl}}/api/v1/calculations/statistics"
+      }
+    }
+  ]
+}

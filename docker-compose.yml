@@ -1,0 +1,10 @@
+services:
+  api:
+    build: .
+    container_name: python-api-code-design
+    ports:
+      - "5000:5000"
+    environment:
+      FLASK_ENV: production
+      LOG_LEVEL: INFO
+    restart: unless-stopped

@@ -1,2 +1,0 @@
-class InvalidPayloadError(Exception):
-    pass
